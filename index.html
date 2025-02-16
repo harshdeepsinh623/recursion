@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion Output</title>
+</head>
+<body>
+
+    <script>
+
+        document.write("<h3>Head Recursion:</h3>");
+        function rec1(n){
+           if(n > 0){
+            document.write(n + " ");  
+            rec1(n - 1);
+           }
+        }
+        rec1(5);
+        document.write("<br>--------------------------------------------------<br>");
+
+
+        document.write("<h3>Tail Recursion:</h3>");
+        function rec2(n){
+            if(n > 0){
+                rec2(n - 1);
+                document.write(n + " "); 
+            }
+        }
+        rec2(5);
+        document.write("<br>--------------------------------------------------<br>");
+
+
+        document.write("<h3>Tree Recursion (console only):</h3>");
+        function rec3(n){
+            if(n > 0){
+                console.log(n); 
+                rec3(n - 1);
+                rec3(n - 1);
+            }
+        }
+        rec3(4);
+        document.write("Check console for tree recursion output.");
+        document.write("<br>--------------------------------------------------<br>");
+
+
+        document.write("<h3>Tree Recursion (Document Output):</h3>");
+        function rec4(n){
+            if(n > 0){
+                rec4(n - 1);
+                rec4(n - 1);
+                document.write(n + " ");
+            }
+        }
+        rec4(4);
+        document.write("<br>--------------------------------------------------<br>");
+
+
+        document.write("<h3>Nested Recursion:</h3>");
+        function rec5(n){
+            if(n > 0){
+                document.write(n + " "); 
+                rec5(n - 1);
+            }
+        }
+        rec5(4);
+
+        document.write("<br>--------------------------------------------------<br>");
+
+    </script>
+    
+</body>
+</html>
